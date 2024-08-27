@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from Pizza.pizza_product import MenuPizza, OwnPizza
+from web_pizza_project.Pizza.pizza_product import MenuPizza, OwnPizza
 import json
 import time
 

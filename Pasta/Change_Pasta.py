@@ -1,11 +1,10 @@
-from web_pizza_project.Pizza.pizza_product import MenuPizza
+from web_pizza_project.Pasta.pasta_product import MenuPasta
 
 
-class ChangePizza:
-
+class ChangePasta:
     def __init__(self, position):
-        if position in MenuPizza.menu:
-            self.position = {position: MenuPizza.menu[position]}
+        if position in MenuPasta.menu:
+            self.position = {position: MenuPasta.menu[position]}
         else:
             self.position = {position: [0, 0, []]}
 
@@ -25,13 +24,13 @@ class ChangePizza:
         return self.position
 
     def add_to_menu(self, position):
-        MenuPizza.menu[position] = self.position[position]
-        return MenuPizza.menu
+        MenuPasta.menu[position] = self.position[position]
+        return MenuPasta.menu
 
     @staticmethod
     def remove_from_menu(position):
-        if position in MenuPizza.menu:
-            removed_position = MenuPizza.menu.pop(position)
-            return removed_position, MenuPizza.menu
+        if position in MenuPasta.menu:
+            removed_position = MenuPasta.menu.pop(position)
+            return removed_position, MenuPasta.menu
         else:
             return "Позиции нет в меню"
